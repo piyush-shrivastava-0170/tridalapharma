@@ -10,15 +10,16 @@ const Nav = () => {
     const titleStyle = "hover:underline text-[#136A62] font-medium text-xl xl:text-2xl";
     return (
         <div className="bg-gradient-to-r  from-[#E1EFF5] to-[#E1EFF5] text-[#218275] px-10">
-            <nav className="flex justify-between items-center p-6">
+            <nav className="flex justify-between items-center px-4 py-2">
                 <div className="text-2xl font-bold flex items-center">
-                    <img src={logo} alt="Tridala Logo" className="inline-block h-12 md:h-16 xl:h-28 mr-2" />
+                    <img src={logo} alt="Tridala Logo" className="inline-block h-12 md:h-16 xl:h-24 mr-2" />
                 </div>
                 <div className="hidden md:flex space-x-8 xl:space-x-16 text-[#218275]">
                     <Link to="/" className={titleStyle}>Home</Link>
                     <Link to="/Products" className={titleStyle}>Products</Link>
                     <Link to="/Team" className={titleStyle}>Team</Link>
                     <Link to="/Purpose" className={titleStyle}>Purpose</Link>
+                    <Link to="/Events" className={titleStyle}>Events</Link>
                     <Link to="/HealthTips" className={titleStyle}>Health Tips</Link>
                 </div>
                 <div className="md:hidden flex items-center">
@@ -35,6 +36,7 @@ const Nav = () => {
                     <Link to="/Products" className="hover:underline">Products</Link>
                     <Link to="/Team" className="hover:underline">Team</Link>
                     <Link to="/Purpose" className="hover:underline">Purpose</Link>
+                    <Link to="/Events" className={titleStyle}>Events</Link>
                     <Link to="/HealthTips" className="hover:underline">Health Tips</Link>
                 </div>
             )}

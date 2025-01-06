@@ -1,7 +1,7 @@
 /* Container to hold the card */
 .card-container {
-    width: 144px;
-    height: 160px;
+    width: 200px;
+    height: 200px;
     perspective: 1000px;
     position: relative;
 }

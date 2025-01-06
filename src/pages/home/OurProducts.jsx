@@ -47,7 +47,7 @@ export default function OurProducts() {
                 onClick={handlePrevSlide}
                 className="absolute left-1 md:left-2 xl:left-10 top-1/2 transform -translate-y-1/2 p-3 rounded-full z-10"
             >
-                <IoIosArrowBack size={24} />
+                <IoIosArrowBack size={30} />
             </button>
 
             {/* Image Container */}
@@ -60,13 +60,13 @@ export default function OurProducts() {
                 {images.map((image, index) => (
                     <div
                         key={index}
-                        className={`flex-shrink-0 w-full px-6 ${visibleSlides === 2 ? "md:w-1/2" : ""
+                        className={`flex-shrink-0 flex justify-center w-full px-6 ${visibleSlides === 2 ? "md:w-1/2" : ""
                             } ${visibleSlides === 3 ? "xl:w-1/3" : ""} `}
                     >
                         <img
                             src={image}
                             alt={`Slide ${index + 1}`}
-                            className="w-full h-auto rounded-md"
+                            className={`w-60 h-auto rounded-md ${index===1?"xl:w-[4]":"" }`}
                         />
                     </div>
                 ))}
@@ -77,7 +77,7 @@ export default function OurProducts() {
                 onClick={handleNextSlide}
                 className="absolute right-1 md:right-4 xl:right-10  top-1/2 transform -translate-y-1/2 p-3 rounded-full z-10"
             >
-                <IoIosArrowForward size={24} />
+                <IoIosArrowForward size={30} />
             </button>
         </div>
     );

@@ -3,6 +3,7 @@ import Home from './pages/home/Home.jsx';
 import HealthTips from './pages/healthTips/HealthTips.jsx';
 import Purpose from './pages/purpose/Purpose.jsx';
 import Products from './pages/products/Products.jsx';
+import Events from './pages/events/Events.jsx';
 import Team from './pages/team/Team.jsx';
 import Nav from './components/Nav.jsx';
 import Footer from './components/Footer.jsx';
@@ -19,6 +20,7 @@ function App() {
         <Route path="/Purpose" element={<Purpose />} />
         <Route path="/HealthTips" element={<HealthTips />} />
         <Route path="/Products" element={<Products />} />
+        <Route path="/Events" element={<Events />} />
         <Route path="/Team" element={<Team />} />
       </Routes>
       <Footer />

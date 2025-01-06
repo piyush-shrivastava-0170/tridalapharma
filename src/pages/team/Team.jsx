@@ -6,6 +6,10 @@ import ceo from './../../assets/people/ceo.png';
 import vp from './../../assets/people/vp.png';
 import marketing from './../../assets/people/marketing.png';
 import chairperson from './../../assets/people/chairperson.png';
+import diabetesSpecialist from "./../../assets/people/diabetesSpecialist.png"
+import surgeon from "./../../assets/people/surgeon.png"
+import Pediatrician from "./../../assets/people/Pediatrician.png"
+import surgicalOncologist from "./../../assets/people/surgicalOncologist.png"
 import PersonCard from './PersonCard';
 export default function Team() {
   const personsRow1 = [
@@ -52,6 +56,48 @@ export default function Team() {
       linkedin: "https://linkedin.com"
     },
   ]
+  const advisoryTeam = [
+    {
+      img: Pediatrician,
+      name: "DR. Narasimppa  GM",
+      role: "Pediatrician",
+      description: "Dr. Narasimhappa advises Tridala to ensure its medicines meet the critical needs of pediatric care, focusing on effective, safe, and accessible solutions for children.",
+      x: "https://twitter.com",
+      instagram: "https://instagram.com",
+      facebook: "https://facebook.com",
+      linkedin: "https://linkedin.com"
+    },
+    {
+      img: diabetesSpecialist,
+      name: "Dr. Ambrish C",
+      role: "DIABETES CARE SPECIALIST",
+      description: "Dr. Ambrish C believes Tridala's mission aligns with today's urgent need for affordable diabetes care, making quality treatment accessible to all patients.",
+      x: "https://twitter.com",
+      instagram: "https://instagram.com",
+      facebook: "https://facebook.com",
+      linkedin: "https://linkedin.com"
+    },
+    {
+      img: surgicalOncologist,
+      name: "DR. Girish G",
+      role: "Surgical oncologist",
+      description: "Dr. Girish, MBBS, MS, MCh, is an experienced surgical oncologist specializing in laparoscopic and robotic surgeries, offering over 14 years of expert, compassionate care to cancer patients.",
+      x: "https://twitter.com",
+      instagram: "https://instagram.com",
+      facebook: "https://facebook.com",
+      linkedin: "https://linkedin.com"
+    },
+    {
+      img: surgeon,
+      name: "DR. ARUO NAYAK",
+      role: "GENERAL SURGEON",
+      description: "Dr. Arun Nayak joined the advisory board to guide Tridala in delivering surgical-grade medicines, driven by his passion for accessible high-quality healthcare.",
+      x: "https://twitter.com",
+      instagram: "https://instagram.com",
+      facebook: "https://facebook.com",
+      linkedin: "https://linkedin.com"
+    }
+  ];
   return (
     <>
       <div className="bg-slate-200">
@@ -64,7 +110,7 @@ export default function Team() {
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center md:justify-around space-y-10 md:space-y-0 md:space-x-10 xl:space-x-20 p-5 md:p-10">
           <div className="relative rounded-lg overflow-hidden md:w-full md:max-w-fit">
-            <img className="w-fit h-48 md:h-72 xl:h-96" src={founder} alt="Profile" />
+            <img className="w-fit h-52 md:h-80 xl:h-96" src={founder} alt="Profile" />
             <div className="absolute bottom-0 w-full bg-teal-600 bg-opacity-90 text-center py-2 rounded-b-lg">
               <p className="text-white font-semibold text-sm sm:text-base md:text-lg lg:text-xl">
                 Mr. Kempraju K
@@ -81,17 +127,42 @@ export default function Team() {
           </div>
         </div>
         <div className='flex justify-center p-5 md:p-10'>
-          <div className='text-orange-500 text-2xl font-bold'>Board of Directors</div>
+          <div className='text-3xl xl:text-5xl font-bold'>Board of Directors</div>
         </div>
         <div className="flex flex-col md:flex-row md:justify-around items-center space-y-2 md:space-y-0 p-2 md:py-10">
-          {personsRow1.map((person)=>{
+          {personsRow1.map((person) => {
             return (<PersonCard person={person} />);
           })}
         </div>
         <div className="flex flex-col md:flex-row md:justify-around items-center space-y-2 md:space-y-0 p-2 md:py-10">
-        {personsRow2.map((person)=>{
+          {personsRow2.map((person) => {
             return (<PersonCard person={person} />);
           })}
+        </div>
+        <div className='flex flex-col text-center items-center justify-center py-5'>
+          <div className='text-3xl xl:text-5xl font-bold mb-5 xl:mb-10'>Advisory Team</div>
+          <div className='flex flex-col md:flex-row flex-wrap justify-center space-y-4 md:space-y-0 md:space-x-4 xl:space-x-16'>
+            {advisoryTeam.map((item, index) => (
+              <div
+                key={index}
+                className={`flex flex-col bg-[#3DAAA5E3] rounded-2xl w-48 md:w-52 xl:w-72 md:h-[550px] mx-2 ${index === 0 ? 'mt-0' : 'mt-2'
+                  }`}
+              >
+                <img src={item.img} className='h-52 md:h-64' alt="" />
+                <div className='text-white font-bold mt-2'>{item.name}</div>
+                <div>{item.role}</div>
+                <div className='md:h-52 xl:h-40'>
+                  <div className='text-justify text-white p-2'>{item.description}</div>
+                </div>
+                <div className="flex justify-around pb-2">
+                  <a href={item.x} className="text-white hover:text-gray-200"><i className="fab fa-x-twitter"></i></a>
+                  <a href={item.instagram} className="text-white hover:text-gray-200"><i className="fab fa-instagram"></i></a>
+                  <a href={item.facebook} className="text-white hover:text-gray-200"><i className="fab fa-facebook"></i></a>
+                  <a href={item.linkedin} className="text-white hover:text-gray-200"><i className="fab fa-linkedin"></i></a>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </>
